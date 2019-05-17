@@ -5,7 +5,7 @@ https://github.com/1RyanGoodman/HeartDiseasePrediction
 One probably doesn't need to be convinced that understanding heart disease is important for global health.  However, one simple statistic should convince the uninformed... Cardiovascular diseases are the leading cause of death globally.
 https://en.wikipedia.org/wiki/Cardiovascular_disease#cite_note-GBD2015De-4
 
-While the sample size in the analysis in this model only covers 303 individuals, we are able to clearly see, visually, patterns around certain characteristics that are correlated with heart disease.  In my summary, I highlight three specific characteristics with these correlations.  Some of these will be surprising...
+While the sample size in the analysis in this model only covers 303 individuals, we are able to clearly see, visually, patterns around certain characteristics that are correlated with heart disease.  In my summary, I highlight three specific attributes, some of which will be surprising...
 
 The feature "thalach" refers to the maximum heart rate achieved.  Higher levels of this are shown to be correlated with a higher probability of heart disease.  This seems to implies the heart is attempting to overwork in incidences of heart disease, attempting to overcompensate for functional deficiency.
 
