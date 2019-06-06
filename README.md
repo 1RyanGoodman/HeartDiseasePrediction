@@ -1,7 +1,22 @@
-Objectives:
+
+
+## Objectives:
 I will attempt to find the main contributors to heart disease through the UCI Heart Disease dataset.
 
-Please see my blog here: https://medium.com/@HawkeyeRye/using-data-science-to-predict-heart-disease-69228f78dc0
+#### Please see my blog on this project here: https://medium.com/@HawkeyeRye/using-data-science-to-predict-heart-disease-69228f78dc0
+
+The following was used in my analysis:
+
+**Data:**
+- https://github.com/1RyanGoodman/HeartDiseasePrediction/blob/master/heart.csv or https://www.kaggle.com/ronitf/heart-disease-uci
+**Python Packages:**
+- numpy
+- pandas
+- os
+- matplotlib
+- time
+- sklearn
+- seaborn
 
 Cardiovascular diseases are the leading cause of death globally. As such, the myriad and complex factors that predicate it are great potential problems for data scientists to tackle.
 
@@ -9,9 +24,9 @@ However, this problem is like many faced by data scientists, and they have no si
 
 This dataset in my study covers 303 individuals, 14 attributes, and an indicator of the whether they had heart disease.
 
-
 My approach will include Exploratory Data Analysis, Feature Engineering (minimal required in this example), Testing Multiple Models, including several with GridSearch, and one-by-one analysis the models' top features as they relate current medical knowledge.
 
+As this is a binary classification problem, I will use accuracy score and f_score.  I will just view f_score, since this is interesting and relevant in practice when looking at the potential for a disease.  I will set beta at .8, weighting recall more heavily than precision with the idea that this could be used as an indicator to take preventative action. Accuracy score, however, will be the more relevant measure, since I am looking primarily for which features are most important in predicting the incidence of heart disease and false positives and false negatives should have equal weight in this comparison.
 
 Exploratory Data Analysis
 age: The person's age in years
@@ -39,6 +54,23 @@ I ran 14 different models, four of which had a variety of parameters to test thr
 Of the top models, I chose to look more deeply into three classifiers: Bagging, RandomForest, and AdaBoost.  These models provided top scores on the test data as well as readily accessible feature importances.
 
 Most of the model's top features made sense when followed up with research into the common factors related to heart disease according to current medical knowledge.  There were, however, a few features that didn't make sense.  This led me to the Pearson Correlation significance tests and reflection on the downsides of a dataset with only 303 records.
+
+### Results:
+The main factors predictive of the incidence of heart disease included:
+**oldpeak** - the ST Depression in an ECG (Electrocardiogram).
+**ca** - is the number of major vessels (0–3) colored by flouroscopy.
+**cp_0** - (typical angina)
+**thalach** - the maximum heart rate achieved
+**thal_2** - thalassemia - reversible defect
+
+I corroborated these features with sources online in my research.
+
+The few questionable features included:
+**age** - Age, as a negative correlation
+**chol** - Total Cholesterol, as a negative correlation
+**trestbps - Resting Blood Pressure, as a negative correlation
+
+I have dismissed the model results for these features primarily due to being contrary to medical knowledge, but also either statistically insignificant (trestbps, chol) or having been introduced through an unknown bias in the study (age).
 
 There were several takeaways from this project.  This was a great reminder that we should be questioning and skeptical data scientists, and not blindly trust our model's results.  We should particularly not extrapolate meaning where we do not understand any logical rationale for the results.
 
