@@ -20,15 +20,21 @@ The following was used in my analysis:
 - sklearn
 - seaborn
 
+### Introduction
+
 Cardiovascular diseases are the leading cause of death globally. As such, the myriad and complex factors that predicate it are great potential problems for data scientists to tackle.
 
 However, this problem is like many faced by data scientists, and they have no simple solution. The complexity of the problem itself is based on the myriad interactions that occur within the human body. Medical doctors and researchers are still attempting to understand these.
+
+### The Data and the Problem
 
 This dataset in my study covers 303 individuals, 14 attributes, and an indicator of the whether they had heart disease.
 
 My approach will include Exploratory Data Analysis, Feature Engineering (minimal required in this example), Testing Multiple Models, including several with GridSearch, and one-by-one analysis the models' top features as they relate current medical knowledge.
 
 As this is a binary classification problem, I will use accuracy score and f_score.  I will just view f_score, since this is interesting and relevant in practice when looking at the potential for a disease.  I will set beta at .8, weighting recall more heavily than precision with the idea that this could be used as an indicator to take preventative action. Accuracy score, however, will be the more relevant measure, since I am looking primarily for which features are most important in predicting the incidence of heart disease and false positives and false negatives should have equal weight in this comparison.
+
+#### The Features
 
 Exploratory Data Analysis
 age: The person's age in years
@@ -46,6 +52,7 @@ ca: The number of major vessels (0-3)
 thal: A blood disorder called thalassemia (3 = normal; 6 = fixed defect; 7 = reversable defect)
 target: Heart disease (0 = no, 1 = yes)
 
+### The Analysis
 
 There are only 303 records in the dataset, so I kept a close eye on the reliability and significance of the model's results.  This included testing for statistical significance (whether the Pearson correlation was greater than or less than zero) as well as researching current medical knowledge of these features and their association or connection with the presence of heart disease.
 
@@ -73,6 +80,8 @@ The few questionable features included:
 **trestbps - Resting Blood Pressure, as a negative correlation
 
 I have dismissed the model results for these features primarily due to being contrary to medical knowledge, but also either statistically insignificant (trestbps, chol) or having been introduced through an unknown bias in the study (age).
+
+### Takeaways
 
 There were several takeaways from this project.  This was a great reminder that we should be questioning and skeptical data scientists, and not blindly trust our model's results.  We should particularly not extrapolate meaning where we do not understand any logical rationale for the results.
 
