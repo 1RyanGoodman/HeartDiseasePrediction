@@ -8,7 +8,9 @@ I will attempt to find the main contributors to heart disease through the UCI He
 The following was used in my analysis:
 
 **Data:**
-- https://github.com/1RyanGoodman/HeartDiseasePrediction/blob/master/heart.csv or https://www.kaggle.com/ronitf/heart-disease-uci
+- https://github.com/1RyanGoodman/HeartDiseasePrediction/blob/master/heart.csv
+- or https://www.kaggle.com/ronitf/heart-disease-uci
+
 **Python Packages:**
 - numpy
 - pandas
