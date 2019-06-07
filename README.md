@@ -92,6 +92,9 @@ The few questionable features included:
 
 I have dismissed the model results for these features primarily due to being contrary to medical knowledge, but also either statistically insignificant (trestbps, chol) or having been introduced through an unknown bias in the study (age).
 
+## Potential Improvements:
+I think the main area for improvement here is finding a larger dataset.  While the UCI dataset is the most commonly used dataset for this problem historically, there are other datasets.  There may be reasons they are not as commonly used, but they might clarify some issues, particularly the unresolved negative correlation with age.
+
 ### Summary:
 
 We should be skeptical data scientists, and not blindly trust our models' results. We should be particularly careful when tempted to extrapolate meaning where we do not understand any logical rationale for the results. We can do this by researching the findings of others, testing significance, testing a variety of models, and not assuming our dataset is free of any bias.
