@@ -92,13 +92,10 @@ The few questionable features included:
 
 I have dismissed the model results for these features primarily due to being contrary to medical knowledge, but also either statistically insignificant (trestbps, chol) or having been introduced through an unknown bias in the study (age).
 
-## Summary:
-We should be questioning and skeptical data scientists, and not blindly trust our models' results.  We should be particularly careful when tempted to extrapolate meaning where we do not understand any logical rationale for the results.
+### Summary:
 
-We can do this by researching the findings of others, testing significance, testing a variety of models, and not assuming our dataset is free of any bias.
-
+We should be skeptical data scientists, and not blindly trust our models' results. We should be particularly careful when tempted to extrapolate meaning where we do not understand any logical rationale for the results. We can do this by researching the findings of others, testing significance, testing a variety of models, and not assuming our dataset is free of any bias.
 We like to solve problems, but the problems we try to solve are often much more complex than applying your typical machine learning model and simply reading out results that revolutionize the world. We need to ask a lot of questions about each specific case.
-
 
 - Does machine learning work for this case? Or, should I just stick with descriptive statistics?
 - How many different models should I test?
@@ -106,5 +103,4 @@ We like to solve problems, but the problems we try to solve are often much more 
 - Do the results corroborate the established understanding in this field and can we defend the results if they do not?
 
 For my particular study, I have a few answers to these scrutinizing questions.
-
 Machine learning should work for this case, but a much larger dataset would be required. I would also need to have an in-depth understanding of how the dataset was created to make sure I understand any potential biases. Finally, this is a study where an engaged partnership with trained medical professionals would be essential.
